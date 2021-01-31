@@ -1,4 +1,5 @@
 import { useState } from 'react'; 
+import config from './config';
 import Search from './components/Search';
 import List from './components/List';
 import './App.css';
@@ -12,10 +13,14 @@ export default function App() {
     const endpoint = 'https://api.github.com/repos';
     const url = `${endpoint}/${owner}/${repo}/commits`;
 
+    const options = {
+      'Authorization': `token ${config.API_KEY}`
+    };
+
     setOwner(owner);
     setRepo(repo);
 
-    fetch(url)
+    fetch(url, options)
       .then(res => res.json())
       .then(data => {
         setCommits(data);
