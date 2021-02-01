@@ -41,7 +41,9 @@ export default function ListItem(props) {
 
   return (
     <li key={item.sha}>
-      <p className="commit--message">{item.commit.message}</p>
+      <a href={item.html_url} target="_blank">
+        <p className="commit--message">{item.commit.message}</p>
+      </a>
       <div className="commit--attribution">
         {item.author && 
           <img src={item.author.avatar_url} className="avatar" alt="avatar" /> 

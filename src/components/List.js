@@ -25,7 +25,14 @@ export default function List(props) {
 
   return (
     <>
-      <h2>{owner} / {repo} {error && <span className='error'>{error}</span>}</h2>
+      <h2>{owner} / {repo} 
+        {' '}
+        { error 
+          ? <span className='error'>{error}</span>
+          : <span className='h2--sub'>commits</span>
+        }
+          
+      </h2>
       <ErrorBoundary>
         <ul className="list">
           {commits.map((item) => (

@@ -8,7 +8,9 @@ export default function Search(props) {
     event.preventDefault();
     const owner = event.target.search_owner.value;
     const repo = event.target.search_repo.value;
-    history.push(`/${owner}/${repo}`);
+    if (owner.length && repo.length) {
+      history.push(`/${owner}/${repo}`);
+    }
   }
 
   return (
