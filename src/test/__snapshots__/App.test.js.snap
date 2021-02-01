@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders the UI as expected 1`] = `
+<main
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <h1>
+      GitHub.by
+    </h1>
+  </header>
+  <div
+    className="searchbar"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="inputgroup"
+      >
+        <label
+          htmlFor="search_owner"
+        >
+          User
+        </label>
+        <input
+          aria-label="username"
+          id="search_owner"
+          name="search_owner"
+          type="text"
+        />
+      </div>
+      <div
+        className="inputgroup"
+      >
+        <label
+          htmlFor="search_repo"
+        >
+          Repo
+        </label>
+        <input
+          aria-label="repo"
+          id="search_repo"
+          name="search_repo"
+          type="text"
+        />
+      </div>
+      <input
+        className="button"
+        type="submit"
+        value="Find"
+      />
+    </form>
+  </div>
+</main>
+`;
