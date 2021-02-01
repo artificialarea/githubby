@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListItem /> renders a ListItem 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <ListItem
+    item={
+      Array [
+        Object {
+          "author": Object {
+            "avatar_url": "https://avatars.githubusercontent.com/u/1991943?v=4",
+            "login": "artificialarea",
+          },
+          "commit": Object {
+            "author": Object {
+              "date": "2020-08-17T23:01:44Z",
+            },
+            "message": "test commit message",
+          },
+          "sha": "c32035e6e979e0d83ceecda1e3d175d4449d73dd",
+        },
+        Object {
+          "author": Object {
+            "avatar_url": "https://avatars.githubusercontent.com/u/1991943?v=4",
+            "login": "artificialarea",
+          },
+          "commit": Object {
+            "author": Object {
+              "date": "2020-08-18T23:01:44Z",
+            },
+            "message": "test commit message 2",
+          },
+          "sha": "c32035e6e979e0d83ceecda1e3d175d4449d73zz",
+        },
+      ]
+    }
+  />
+</Router>
+`;
+
+exports[`<ListItem /> renders something 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <ListItem
+    item={Object {}}
+  />
+</Router>
+`;

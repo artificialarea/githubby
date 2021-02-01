@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App component renders the UI as expected 1`] = `
+exports[`<App /> renders the UI as expected 1`] = `
 <main
   className="App"
 >
@@ -8,13 +8,19 @@ exports[`App component renders the UI as expected 1`] = `
     className="App-header"
   >
     <h1>
-      GitHub.by
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        GitHub.by
+      </a>
     </h1>
   </header>
   <div
     className="searchbar"
   >
     <form
+      id="search-form"
       onSubmit={[Function]}
     >
       <div

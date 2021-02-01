@@ -1,26 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import List from '../components/List';
+import ListItem from '../components/ListItem';
 import fauxData from './fauxData';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json'
 import { BrowserRouter } from 'react-router-dom';
 
-describe('<List />', () => {
+
+describe('<ListItem />', () => {
 
   it('renders something', () => {
     const wrapper = shallow(
       <BrowserRouter>
-        <List />
+        <ListItem />
       </BrowserRouter>
     )
     expect(toJson(wrapper)).toMatchSnapshot()
   });
 
-  it('renders a list', () => {
+  it('renders a ListItem', () => {
     const wrapper = shallow(
       <BrowserRouter>
-        <List commits={fauxData}/>
+        <ListItem item={fauxData}/>
       </BrowserRouter>
     )
     // toJson(wrapper)

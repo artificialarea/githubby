@@ -5,6 +5,7 @@ import ErrorBoundary from '../ErrorBoundary';
 
 export default function List(props) {
   const { owner, repo } = props.match.params;
+  // const pathId = props.location.pathname;
   const [commits, setCommits] = useState([]);
   const [error, setError] = useState(null);
 
