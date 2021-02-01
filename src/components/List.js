@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import ApiService from '../services/api-service';
 import ListItem from './ListItem';
+import ErrorBoundary from '../ErrorBoundary';
 
 export default function List(props) {
   const { owner, repo } = props.match.params;
@@ -25,14 +26,16 @@ export default function List(props) {
   return (
     <>
       <h2>{owner} / {repo} {error && <span className='error'>{error}</span>}</h2>
-      <ul className="list">
-        {commits.map((item) => (
-          <ListItem 
-            key={item.sha}
-            item={item}
-          />
-        ))}
-      </ul>
+      <ErrorBoundary>
+        <ul className="list">
+          {commits.map((item) => (
+            <ListItem 
+              key={item.sha}
+              item={item}
+            />
+          ))}
+        </ul>
+      </ErrorBoundary>
     </>
   )
 }
