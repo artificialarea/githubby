@@ -1,10 +1,14 @@
+import { useHistory } from 'react-router-dom';
+
 export default function Search(props) {
+
+  const history = useHistory();
 
   const onSubmitForm = (event) => {
     event.preventDefault();
     const owner = event.target.search_owner.value;
     const repo = event.target.search_repo.value;
-    props.getRepo(owner, repo);
+    history.push(`/${owner}/${repo}`);
   }
 
   return (

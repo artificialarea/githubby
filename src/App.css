@@ -66,3 +66,7 @@ label {
 .error {
   color: red;
 }
+
+.list {
+  margin-top: 40px;
+}
