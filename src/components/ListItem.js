@@ -30,15 +30,31 @@ function formatTime(date) {
 
 export default function ListItem(props) {
   const { item } = props;
-  const modifiedDate = formatDate(new Date(item.commit.author.date));
-  const modifiedTime = formatTime(new Date(item.commit.author.date));
+
+  let modifiedDate = '';
+  let modifiedTime = '';
+
+  if (item.commit.author.date) {
+    modifiedDate = formatDate(new Date(item.commit.author.date));
+    modifiedTime = formatTime(new Date(item.commit.author.date));
+  }
 
   return (
     <li key={item.sha}>
       <p className="commit--message">{item.commit.message}</p>
       <div className="commit--attribution">
-        <img src={item.author.avatar_url} className="avatar" alt="avatar" />
-        <p><span className="author">{item.author.login}</span> <span className="date">{modifiedDate}</span> <span className="time">{modifiedTime}</span></p>
+        {item.author && 
+          <img src={item.author.avatar_url} className="avatar" alt="avatar" /> 
+        }
+        <p>
+          {item.author && 
+            <span className="author">{item.author.login}</span>
+          } 
+          {' '}
+          <span className="date">{modifiedDate}</span>
+          {' '} 
+          <span className="time">{modifiedTime}</span>
+        </p>
       </div>
     </li>
   )
