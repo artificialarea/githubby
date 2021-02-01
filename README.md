@@ -1,9 +1,8 @@
 # GitHub.by
 
+**live demo: https://githubby.vercel.app**
+
 playful assignment for Hudl
-
-**live demo: https://artsy-client.vercel.app**
-
 
 
 <br />
