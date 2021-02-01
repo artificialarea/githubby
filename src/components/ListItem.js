@@ -41,7 +41,7 @@ export default function ListItem(props) {
 
   return (
     <li key={item.sha}>
-      <a href={item.html_url} target="_blank">
+      <a href={item.html_url} target="_blank" rel="noreferrer" >
         <p className="commit--message">{item.commit.message}</p>
       </a>
       <div className="commit--attribution">
