@@ -2,6 +2,8 @@
 
 playful assignment for Hudl
 
+**live demo: https://artsy-client.vercel.app**
+
 
 
 <br />
