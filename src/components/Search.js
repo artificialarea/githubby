@@ -11,11 +11,12 @@ export default function Search(props) {
     if (owner.length && repo.length) {
       history.push(`/${owner}/${repo}`);
     }
+    document.getElementById("search-form").reset();
   }
 
   return (
     <div className="searchbar">
-      <form onSubmit={onSubmitForm}>
+      <form id="search-form" onSubmit={onSubmitForm}>
         <div className="inputgroup">
           <label htmlFor="search_owner">User</label>
           <input 
